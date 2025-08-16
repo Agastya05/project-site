@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard Blog - Modern Cybersecurity Awareness</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-blue-600 dark:text-blue-500">CyberGuard</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#articles" class="nav-link">Articles</a>
+                <a href="#threats" class="nav-link">Threats</a>
+                <a href="#tips" class="nav-link">Tips</a>
+                <a href="#quiz" class="nav-link">Quiz</a>
+                <a href="#resources" class="nav-link">Resources</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                 <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                    <i data-feather="moon" class="dark-icon"></i>
+                    <i data-feather="sun" class="light-icon hidden"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden p-2">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+        <a href="#articles" class="mobile-nav-link">Articles</a>
+        <a href="#threats" class="mobile-nav-link">Threats</a>
+        <a href="#tips" class="mobile-nav-link">Tips</a>
+        <a href="#quiz" class="mobile-nav-link">Quiz</a>
+        <a href="#resources" class="mobile-nav-link">Resources</a>
+    </div>
+
+    <main id="main-content">
+        <!-- Home Section -->
+        <section id="home" class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Cybersecurity in the Modern Age.</h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto">A blog dedicated to demystifying digital security. Read our articles, take the quiz, and stay ahead of threats.</p>
+            <a href="#articles" class="cta-button">Explore Articles</a>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="py-20 bg-gray-100 dark:bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Latest Articles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article Card 1 -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Phishing" alt="Phishing illustration" class="rounded-t-lg">
+                        <div class="p-6">
+                            <span class="tag">Threats</span>
+                            <h3 class="card-title">The Anatomy of a Phishing Attack</h3>
+                            <p class="card-excerpt">Learn to spot the tell-tale signs of a phishing email before you click.</p>
+                            <a href="#" class="read-more">Read More <i data-feather="arrow-right" class="inline w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Article Card 2 -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/10b981/ffffff?text=Passwords" alt="Password security illustration" class="rounded-t-lg">
+                        <div class="p-6">
+                            <span class="tag">Tips</span>
+                            <h3 class="card-title">Beyond 'Password123': Creating Unbreakable Passwords</h3>
+                            <p class="card-excerpt">Discover the tools and techniques for creating and managing strong, unique passwords.</p>
+                            <a href="#" class="read-more">Read More <i data-feather="arrow-right" class="inline w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                    <!-- Article Card 3 -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/ef4444/ffffff?text=Ransomware" alt="Ransomware illustration" class="rounded-t-lg">
+                        <div class="p-6">
+                            <span class="tag">Case Studies</span>
+                            <h3 class="card-title">Case Study: The Colonial Pipeline Ransomware Attack</h3>
+                            <p class="card-excerpt">A deep dive into how one attack caused massive disruption and what we can learn from it.</p>
+                            <a href="#" class="read-more">Read More <i data-feather="arrow-right" class="inline w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Cybersecurity Challenge</h2>
+                <p class="section-subtitle">Think you're a security expert? Test your knowledge with our interactive quiz.</p>
+                <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg mt-10">
+                    <div id="quiz-container">
+                        <div id="quiz-start-screen">
+                            <h3 class="text-2xl font-bold mb-4">Ready to Start?</h3>
+                            <p class="mb-8 text-gray-600 dark:text-gray-400">You'll face 5 questions. Let's see how you do!</p>
+                            <button id="start-quiz-btn" class="cta-button">Start Quiz</button>
+                        </div>
+                        <div id="quiz-question-screen" class="hidden">
+                            <div class="flex justify-between items-center mb-4">
+                                <p class="text-sm font-medium text-gray-500">Question <span id="question-number"></span> of <span id="total-questions"></span></p>
+                                <p class="text-sm font-medium text-gray-500">Score: <span id="quiz-score">0</span></p>
+                            </div>
+                            <p class="text-xl font-semibold mb-6" id="question"></p>
+                            <div id="options" class="space-y-4"></div>
+                        </div>
+                        <div id="quiz-end-screen" class="hidden">
+                            <h3 class="text-2xl font-bold mb-2">Quiz Complete!</h3>
+                            <p class="text-lg mb-4">Your final score is:</p>
+                            <p class="text-5xl font-extrabold text-blue-600 dark:text-blue-500 mb-6" id="final-score"></p>
+                            <p class="mb-8 text-gray-600 dark:text-gray-400" id="score-feedback"></p>
+                            <button id="restart-quiz-btn" class="cta-button">Try Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white dark:bg-black">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p>&copy; 2024 CyberGuard. All rights reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">A modern approach to cybersecurity awareness.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
